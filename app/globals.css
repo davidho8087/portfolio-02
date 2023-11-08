@@ -15,3 +15,56 @@
 body {
   color: rgb(var(--foreground-rgb));
 }
+
+::selection {
+  background-color: #CC6D00; /* Darker shade of orange */
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #CC6D00;
+  color: white;
+}
+
+.loader {
+  color: #64FFDA;
+  fill: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 90vh;
+  & svg {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+.gradient-03 {
+  position: absolute;
+  width: 404px;
+  height: 800px;
+  left: 20%;
+  top: 5%;
+
+  background: rgba(149, 66, 232, 0.35);
+  filter: blur(175px);
+  transform: rotate(-114.2deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.gradient-04 {
+  position: absolute;
+  width: 304px;
+  height: 100vh;
+  left: 30%;
+  top: 10%;
+
+  background: rgba(45, 72, 152, 0.75);
+  filter: blur(200px);
+  transform: rotate(-53.13deg);
+  pointer-events: none;
+  z-index: -1;
+}
+

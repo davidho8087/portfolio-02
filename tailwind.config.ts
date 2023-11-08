@@ -37,14 +37,26 @@ const config: Config = {
         navbarShadow: "0 10px 30px -10px rgba(2,12,27,0.7)"
       },
       colors: {
-        bodyColor: "#0A192F",
-        textGreen: "#64FFDA",
-        textLight: "#CCD6F6",
-        textDark: "#8892B0",
-        hoverColor: "rgba(100,255,218,0.1)"
-      }
+        // assuming these are your dark theme colors
+        dark: {
+          bodyColor: "#0A192F",
+          textGreen: "#FFA64D",
+          textLight: "#CCD6F6",
+          textDark: "#8892B0",
+          hoverColor: "rgba(100,255,218,0.1)",
+        },
+        // add your light theme colors here
+        light: {
+          bodyColor: "#FFFFFF", // Example: a light background
+          textGreen: "#4B5320", // Example: a darker green for visibility on light bg
+          textLight: "#2F4F4F", // Example: a dark slate gray for light theme text
+          textDark: "#696969", // Example: dim gray for secondary text
+          hoverColor: "rgba(100,255,218,0.3)", // Example: more opacity for light theme
+        },
+      },
     },
   },
   plugins: [],
+  darkMode: 'class', // enable the 'class' strategy for dark mode
 }
 export default config
