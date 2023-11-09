@@ -99,7 +99,7 @@ const About = () => {
           <div
             className='w-full lgl:w-2/3 flex flex-col gap-4'>
             <SectionTitle title='About Me' titleNo='01' />
-            <p className='text-base text-textDark dark:text-dark-textLight font-medium'>
+            <p className='text-base text-textDark font-medium'>
 
             Hello! My name is Noor Mohammad and I enjoy creating things that
               live on the internet. My interest in web development started back
@@ -110,15 +110,15 @@ const About = () => {
               &
               CSS!
             </p>
-            <p className='text-base text-textDark dark:text-dark-textLight font-medium'>
+            <p className='text-base text-textDark font-medium'>
 
             Fast-forward to today, and I had the privilege of working at an
               advertising agency, a start-up,{' '}
-              <span className='text-textGreen dark:text-dark-textGreen'>
+              <span className='text-textGreen'>
                 a huge corporation, and a student-led design studio.
               </span>
             </p>
-            <p className='text-base text-textDark dark:text-dark-textLight font-medium'>Here are a few
+            <p className='text-base text-textDark font-medium'>Here are a few
               technologies I have been working with
               recently:</p>
 

@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  .text-textGreen {
+    @apply text-light-textGreen dark:text-dark-textGreen;
+  }
+
+  .text-textLight {
+    @apply text-light-textLight dark:text-dark-textLight;
+  }
+
+  .text-textDark {
+    @apply text-light-textDark dark:text-dark-textDark;
+  }
+
+  .hover-hoverColor:hover {
+    @apply hover:bg-light-hoverColor dark:hover:bg-dark-hoverColor;
+  }
+
+  .bg-textDark {
+    @apply bg-light-textDark dark:bg-dark-textDark;
+  }
+
+  .bg-textGreen {
+    @apply bg-light-textGreen dark:bg-dark-textGreen;
+  }
+
+  .bg-bodyColor {
+    @apply bg-light-bodyColor dark:bg-dark-bodyColor;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
 }

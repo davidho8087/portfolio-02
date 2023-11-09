@@ -48,7 +48,7 @@ const config: Config = {
         // add your light theme colors here
         light: {
           bodyColor: "#FFFFFF", // Example: a light background
-          textGreen: "#4B5320", // Example: a darker green for visibility on light bg
+          textGreen: '#FFA64D', // Example: a darker green for visibility on light bg
           textLight: "#2F4F4F", // Example: a dark slate gray for light theme text
           textDark: "#696969", // Example: dim gray for secondary text
           hoverColor: "rgba(100,255,218,0.3)", // Example: more opacity for light theme

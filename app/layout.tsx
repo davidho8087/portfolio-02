@@ -35,7 +35,7 @@ export default function RootLayout({ children }: {
     <html lang='en' className={`${inter.variable} ${montSerrat.variable}`}>
 
     <body
-      className='w-full h-screen bg-bodyColor dark:bg-dark-bodyColor text-textLight overflow-x-hidden overflow-y-scroll'>
+      className='w-full h-screen bg-gradient-to-t from-orange-50 text-textLight overflow-x-hidden overflow-y-scroll'>
     <ThemeContextProvider>
       <NavBar />
       <main

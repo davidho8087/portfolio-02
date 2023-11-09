@@ -1,6 +1,5 @@
 'use client'
 
-import { useTheme } from '@/app/provider/ThemeContext'
 import React, { Dispatch, SetStateAction, useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import {
@@ -104,12 +103,6 @@ function Bar3Icon({ setMobileMenuOpen }: Bar3IconProps) {
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const { toggleDarkMode } = useTheme();
-
-
-  const handleToggleTheme = () => {
-    toggleDarkMode(); // Use the toggle function provided by the context
-  };
   return (
     <div>
       <nav className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
@@ -145,8 +138,6 @@ function NavBar() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
                 className='px-3 py-1 rounded-md text-textGreen text-sm font-semibold leading-6 border border-textGreen hover:bg-hoverColor duration-300 '
-                onClick={handleToggleTheme} // Use handleToggleTheme here
-
               >Resume
               </motion.button>
             </li>

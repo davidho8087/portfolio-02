@@ -1,13 +1,19 @@
-'use client'
-import React, { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React, { useEffect } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
-function Loader({ isLoading, setIsLoading }: any) {
+interface LoaderProps {
+  isLoading: boolean;
+  setIsLoading: (isLoading: boolean) => void;
+}
+
+function Loader({ isLoading, setIsLoading }: LoaderProps) {
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading();
+    let timeoutId = setTimeout(() => {
+      setIsLoading(false)
     }, 1900);
+    return () => clearTimeout(timeoutId)
   }, [setIsLoading]);
+
   return (
     <AnimatePresence>
       {isLoading && (
@@ -17,54 +23,62 @@ function Loader({ isLoading, setIsLoading }: any) {
           key="motiondivleave"
           transition={{
             duration: 0.45,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
         >
           <motion.svg
             id="logo"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 100"
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            exit={{ scale: 0 }}
+            transition={{
+              duration: 1,
+              ease: 'easeInOut',
+            }}
           >
             <title>Logo</title>
-            <g>
-              <g id="K" transform="translate(35.000000, 35.000000)">
-                <motion.path
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{
-                    duration: 1,
-                    ease: "easeInOut",
-                    delay: 1,
-                  }}
-                  exit={{
-                    scale: 2,
-                  }}
-                  fill="currentColor"
-                  d="M 23.363281 24.847656 L 15.269531 13.421875 L 22.847656 4.730469 C 22.972656 4.582031 23.003906 4.375 22.925781 4.199219 C 22.847656 4.019531 22.675781 3.90625 22.488281 3.90625 L 18.683594 3.90625 C 18.546875 3.90625 18.417969 3.964844 18.324219 4.066406 L 10.429688 12.9375 L 10.429688 4.398438 C 10.429688 4.128906 10.210938 3.90625 9.945312 3.90625 L 6.566406 3.90625 C 6.300781 3.90625 6.085938 4.128906 6.085938 4.398438 L 6.085938 25.140625 C 6.085938 25.410156 6.300781 25.632812 6.566406 25.632812 L 9.945312 25.632812 C 10.210938 25.632812 10.429688 25.410156 10.429688 25.140625 L 10.429688 18.976562 L 12.644531 16.433594 L 19.007812 25.429688 C 19.097656 25.558594 19.246094 25.632812 19.398438 25.632812 L 22.972656 25.632812 C 23.15625 25.632812 23.320312 25.527344 23.402344 25.363281 C 23.484375 25.199219 23.472656 25 23.363281 24.847656 Z M 23.363281 24.847656 "
-                />
-              </g>
-              <motion.path
-                initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
-                transition={{
-                  duration: 1,
-                  ease: "easeInOut",
-                }}
-                exit={{
-                  scale: 2,
-                }}
-                stroke="currentColor"
-                strokeWidth="5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M 50, 5
-          L 11, 27
-          L 11, 72
-          L 50, 95
-          L 89, 73
-          L 89, 28 z"
-              />
-            </g>
+            <motion.rect
+              width='50'
+              height='50'
+              x='25'
+              y='25'
+              rx='5' // Adjust this value for rounded corners
+              initial={{ fill: 'rgba(0, 0, 0, 0)' }}
+              animate={{ fill: 'rgba(0, 0, 0, 1)' }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeInOut',
+              }}
+              exit={{
+                fill: 'rgba(0, 0, 0, 0)',
+                scale: 2,
+              }}
+              fill='currentColor'
+            />
+            <motion.text
+              x='50%'
+              y='50%'
+              dx='-8' // Adjust 'dx', 'dy' to align the 'D' as needed
+              dy='8'
+              textAnchor='middle'
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.5,
+                ease: 'easeInOut',
+                delay: 0.5, // Start the text animation after the rectangle has appeared
+              }}
+              exit={{
+                opacity: 0,
+                scale: 2,
+              }}
+              fill='white'
+              fontSize='35' // Adjust font size as needed
+            >
+              D
+            </motion.text>
           </motion.svg>
         </motion.div>
       )}
