@@ -12,12 +12,6 @@ function Banner() {
         id='home'
         className='max-w-contentContainer min-h-screen mx-auto flex flex-col gap-6 lgl:gap-8 px-5'
       >
-        <motion.h3
-          initial={{ y: 10, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className='text-lg tracking-wide text-textGreen'>Hi, my name is
-        </motion.h3>
         <motion.div
           initial={{ y: 10, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -25,7 +19,8 @@ function Banner() {
 
         >
           <h1 className='text-4xl lgl:text-7xl font-semibold flex flex-col'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400'>
+            <span
+              className='text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-400'>
              David Ho. {' '} </span>
             <span
               className='mt-2 lgl:my-4'>{'{ build }'} = {' '}</span>
@@ -52,9 +47,10 @@ function Banner() {
           transition={{ duration: 0.5, delay: 0.8 }}
           className='text-base md:max-w-[650px] text-textDark font-medium'>
           {' '}
-          I am web developer with 4+ years of experience in Full-Stack
-          Developer.
-          I have a strong foundation in front-end and back-end development.
+          Bringing over three years of experience as a Full-Stack
+          Developer.<span className='inline-block'> Harmonizing front-end creativity with back-end logic is my
+          expertise.</span>
+
         </motion.p>
         <motion.button
           initial={{ y: 10, opacity: 0 }}

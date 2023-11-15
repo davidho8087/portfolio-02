@@ -14,7 +14,7 @@ const variants = {
 };
 
 const TabButton = ({ active, selectTab, children }: TabButtonProps) => {
-  const buttonClasses = active ? 'text-textGreen' : 'text-[#ADB7BE]'
+  const buttonClasses = active ? 'text-textGreen' : 'text-textDark'
 
   return (
     <button onClick={selectTab}>
@@ -24,7 +24,7 @@ const TabButton = ({ active, selectTab, children }: TabButtonProps) => {
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-0.5 bg-textGreen mt-2 mr-3"
+        className="h-[2px] bg-textGreen mt-2 mr-3"
       ></motion.div>
     </button>
   );

@@ -30,6 +30,18 @@
   .bg-bodyColor {
     @apply bg-light-bodyColor dark:bg-dark-bodyColor;
   }
+
+  .bg-bodyGrey {
+    @apply bg-gray-200 dark:bg-gray-700;
+  }
+
+  .border-bodyBorder {
+    @apply border-gray-200 dark:border-gray-600;
+  }
+
+  .text-bodyText {
+    @apply text-gray-900 dark:text-gray-400;
+  }
 }
 
 :root {

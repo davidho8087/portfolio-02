@@ -31,11 +31,9 @@ export default function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-
     <html lang='en' className={`${inter.variable} ${montSerrat.variable}`}>
-
     <body
-      className='w-full h-screen bg-gradient-to-t from-orange-50 text-textLight overflow-x-hidden overflow-y-scroll'>
+      className='w-full h-screen bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll'>
     <ThemeContextProvider>
       <NavBar />
       <main

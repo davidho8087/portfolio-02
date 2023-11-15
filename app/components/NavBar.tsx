@@ -25,10 +25,9 @@ interface Bar3IconProps {
 type ImageLoader = (props: ImageLoaderProps) => string;
 
 const linksArray = [
-  { text: 'Product', href: '#' },
-  { text: 'Features', href: '#' },
-  { text: 'Marketplace', href: '#' },
-  { text: 'Company', href: '#' },
+  { text: 'About Me', href: '#' },
+  { text: 'Experience', href: '#' },
+  { text: 'Contact', href: '#' }
 ]
 
 const imageLoader: ImageLoader = ({ src }) => {
@@ -107,12 +106,12 @@ function NavBar() {
     <div>
       <nav className='mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8' aria-label='Global'>
         <div className='flex lg:flex-1'>
-          <ImageLogo />
+          {/*<ImageLogo />*/}
         </div>
         {/*Bar3Icon Clickable*/}
         <Bar3Icon setMobileMenuOpen={setMobileMenuOpen} />
         {/*TODO Split component*/}
-        <div className='hidden lg:flex lg:flex-1 lg:justify-end'>
+        <div className='hidden lg:flex lg:flex-1 lg:justify-end z-30'>
           <ul className='hidden lg:flex lg:gap-x-8 items-center'>
             {linksArray.map((link, index) => (
               <li key={index}>
@@ -126,13 +125,13 @@ function NavBar() {
                     animate='animate'
                     variants={getVariants(index)}
                   >
-                    <span className='text-textGreen mr-2'>{(index + 1).toString().padStart(2, '0')}</span>
+                    {/*<span className='text-textGreen mr-2'>{(index + 1).toString().padStart(2, '0')}</span>*/}
                     {link.text}
                   </motion.div>
                 </Link>
               </li>
             ))}
-            <li className='flex z-20'>
+           {/* <li className='flex z-20'>
               <motion.button
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -140,7 +139,7 @@ function NavBar() {
                 className='px-3 py-1 rounded-md text-textGreen text-sm font-semibold leading-6 border border-textGreen hover:bg-hoverColor duration-300 '
               >Resume
               </motion.button>
-            </li>
+            </li>*/}
           </ul>
         </div>
       </nav>
